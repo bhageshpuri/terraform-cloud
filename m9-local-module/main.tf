@@ -15,8 +15,7 @@ provider "google" {
 }
 
 module "vpc" {
-  source  = "app.terraform.io/luvveroenterprises/vpc/gcp"
-  version = "1.0.0"
+  source       = "./modules/vpc"
   network_name = var.network_name
   subnet_name = var.subnet_name
 }
